@@ -5,18 +5,19 @@
  CalculiX Version 2.15 Copyright(C) 1998-2018 Guido Dhondt
  
  based on https://github.com/bobmel/CalculiX
-
+ 
 #### Using with FreeCad
 https://www.freecadweb.org/wiki/Download
 
-brew install gcc@8
+````
+$ brew tap brewsci/science
 
-brew tap brewsci/science
+$ brew install gmsh
 
-brew install gmsh
+$ brew install calculix-ccx  <= this will fail, so download binary by link and add symlink to $PATH
 
-ln -s ~/bin/ccx_2.15 /usr/local/bin/ccx
-
+$ ln -s ~/bin/ccx_2.15 /usr/local/bin/ccx
+````
 
 #### Test 
 
@@ -97,3 +98,22 @@ You are using an executable made on Sat Aug 10 02:45:06 EEST 2019
  Job finished
 
 ````
+
+#### Compile
+
+$ brew install gcc@8 
+
+Clone https://github.com/bobmel/CalculiX to ~/Development/calculix/   ,it need to be done for build
+
+````
+# single thread
+$ cd SPOOLES.2.2 => make lib
+# multi thread
+$ cd SPOOLES.2.2/MT/src => make makeLib   
+# build arpack
+$ cd ARPACK  => make lib
+# build ccx_2.15
+$ cd CalculiX/ccx_2.15/src  => make 
+$ ./ccx_2.15 -v
+````
+
