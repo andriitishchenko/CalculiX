@@ -1,4 +1,7 @@
 # CalculiX 2.15 for MacOS (10.14)
+
+ [ DOWNLOAD ](https://github.com/andriitishchenko/CalculiX/releases/latest)
+ 
  CalculiX Version 2.15 Copyright(C) 1998-2018 Guido Dhondt
  
  based on https://github.com/bobmel/CalculiX
